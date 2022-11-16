@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="sort-form">
+        <h3>Sort by</h3>
+        <input type="radio" name="sort" id="id" value="id" checked> Id <br>
+        <input type="radio" name="sort" id="name" value="name"> Name <br>
+        <input type="radio" name="sort" id="hp" value="hp"> HP <br>
+        <input type="radio" name="sort" id="attack" value="attack"> Attack <br>
+        <input type="radio" name="sort" id="defense" value="defense"> Defense <br>
+
+        <h3>Order by</h3>
+        <input type="radio" name="order" id="asc" value="asc" checked> From smallest to biggest <br>
+        <input type="radio" name="order" id="desc" value="desc"> From biggest to smallest <br>
+    </form>
+
+    <form id="filter-form">
+        <h3>Filter by</h3>
+        <input type="text" name="name-filter" id="name-filter" placeholder="Name"><br><br>
+
+        HP FROM: 
+        <span id="hp-from-text">10</span>
+        <input type="range" name="hp-from" id="hp-from" min="10" max="250" value="10">
+
+        HP TO:
+        <span id="hp-to-text">250</span>
+        <input type="range" name="hp-to" id="hp-to" min="10" max="250" value="250">
+
+        <br><br>
+
+        ATTACK FROM: 
+        <span id="attack-from-text">5</span>
+        <input type="range" name="attack-from" id="attack-from" min="5" max="130" value="5">
+
+        ATTACK TO:
+        <span id="attack-to-text">130</span>
+        <input type="range" name="attack-to" id="attack-to" min="5" max="130" value="130">
+
+        <br><br>
+
+        <div id="types"></div>
+        <input type="button" value="Apply filters" id="btn">
+    </form>
+
+
+    
+    <div id="result"></div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
